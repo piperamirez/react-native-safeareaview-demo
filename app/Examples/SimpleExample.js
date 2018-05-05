@@ -10,7 +10,7 @@ export default class SimpleExample extends React.Component {
     }
     render() {
         return (
-            <SafeAreaView style={styles.app}>
+            <SafeAreaView style={styles.app} forceInset={{ top: 'always', bottom: 'always', right: 'always', left: 'always' }}>
                 <View style={styles.view}>
                     <Text style={styles.emoji}>🎉</Text>
                     <Text style={styles.text}>Yay!</Text>

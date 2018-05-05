@@ -69,7 +69,7 @@ export default class HomeScreen extends React.Component {
                 <StatusBar
                     backgroundColor="white"
                     barStyle="dark-content"/>
-                <SafeAreaView forceInset={{ top: 'never', right: 'never', left: 'never' }}>
+                <SafeAreaView forceInset={{ top: 'never', bottom: 'always', right: 'never', left: 'never' }}>
                     <List>{introList.map(this.drawElement)}</List>
                     <List>{contentList.map(this.drawElement)}</List>
                     <List>{creditsList.map(this.drawElement)}</List>
