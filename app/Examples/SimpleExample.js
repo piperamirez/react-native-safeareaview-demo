@@ -12,10 +12,10 @@ export default class SimpleExample extends React.Component {
         return (
             <SafeAreaView style={styles.app} forceInset={{ top: 'always', bottom: 'always', right: 'always', left: 'always' }}>
                 <View style={styles.view}>
-                    <Text style={theme.text.title}>Safe Area 🎉</Text>
+                    <Text style={theme.text.title}>What is the Safe Area? 🤔</Text>
                     <Text style={theme.text.paragraph}>
-                        Safe Area is a rectangular region defined in UIKit that
-                        aids with positioning of content in iOS devices,
+                        The Safe Area is a rectangular region defined in UIKit
+                        that aids with positioning of content in iOS devices,
                         specially the iPhone X.
                     </Text>
                     <Text style={theme.text.paragraph}>

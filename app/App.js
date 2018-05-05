@@ -6,9 +6,9 @@ import * as theme from './style/theme'
 import HomeScreen from './Home/HomeScreen'
 import SimpleExample from './Examples/SimpleExample'
 
-import { StackNavigator } from 'react-navigation'
+import { createStackNavigator } from 'react-navigation'
 
-const App = StackNavigator({
+const App = createStackNavigator({
     Home: { screen: HomeScreen },
     SimpleExample: { screen: SimpleExample }
 })
