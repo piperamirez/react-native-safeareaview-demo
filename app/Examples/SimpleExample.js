@@ -13,7 +13,7 @@ export default class SimpleExample extends React.Component {
             <SafeAreaView style={styles.app}>
                 <View style={styles.view}>
                     <Text style={styles.emoji}>🎉</Text>
-                    <Text style={styles.text}>This is the Safe Area!</Text>
+                    <Text style={styles.text}>Yay!</Text>
                     <Button title='Go back' onPress={() => { this.props.navigation.pop() }} />
                 </View>
             </SafeAreaView>

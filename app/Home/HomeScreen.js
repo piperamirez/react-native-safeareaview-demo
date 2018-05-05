@@ -1,7 +1,7 @@
 import React from 'react'
-import { StatusBar, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native'
+import { StatusBar, ScrollView, TouchableOpacity } from 'react-native'
 import { List, ListItem } from 'react-native-elements'
-import { withNavigation } from 'react-navigation'
+import { SafeAreaView } from 'react-navigation'
 
 import * as theme from '../style/theme'
 
@@ -22,7 +22,7 @@ const contentList = [
         link: 'nothing'
     },
     {
-        name: 'Safe Area and item lists',
+        name: 'Safe Area and scroll views',
         subtitle: 'Visible yet not touchable',
         icon: 'list',
         link: 'nothing'
@@ -48,31 +48,33 @@ export default class HomeScreen extends React.Component {
         title: 'Safe Area Examples 🍎'
     }
 
-    drawElement = (l, i) => {
-        return <ListItem
-            component={TouchableOpacity}
-            onPress={() => {
-                this.props.navigation.navigate(l.link)
-            }}
-            leftIcon={{ name: l.icon, color: theme.primary }}
-            key={i}
-            title={l.name}
-            subtitle={l.subtitle}
-        />
+    drawElement = (item, i) => {
+        return (
+            <SafeAreaView key={i} forceInset={{ top: 'never', bottom: 'never', right: 'always', left: 'always' }}>
+                <ListItem
+                    title={ item.name }
+                    subtitle={ item.subtitle }
+                    leftIcon={{ name: item.icon, color: theme.primary }}
+                    component={ TouchableOpacity }
+                    onPress={() => {
+                        this.props.navigation.navigate(item.link)
+                    }} />
+            </SafeAreaView>
+        )
     }
 
     render() {
         return (
-            <SafeAreaView style={{flex: 1}}>
+            <ScrollView>
                 <StatusBar
                     backgroundColor="white"
                     barStyle="dark-content"/>
-                <ScrollView>
+                <SafeAreaView forceInset={{ top: 'never', right: 'never', left: 'never' }}>
                     <List>{introList.map(this.drawElement)}</List>
                     <List>{contentList.map(this.drawElement)}</List>
                     <List>{creditsList.map(this.drawElement)}</List>
-                </ScrollView>
-            </SafeAreaView>
+                </SafeAreaView>
+            </ScrollView>
         )
     }
 }
