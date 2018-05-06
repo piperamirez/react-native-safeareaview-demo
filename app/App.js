@@ -6,6 +6,7 @@ import * as theme from './style/theme'
 import HomeScreen from './Home/HomeScreen'
 import SimpleExample from './Examples/SimpleExample'
 import NavigationExample from './Examples/NavigationExample'
+import ScrollExample from './Examples/ScrollExample'
 
 import { createStackNavigator } from 'react-navigation'
 
@@ -19,9 +20,12 @@ const App = createStackNavigator({
     NavigationExample: {
         screen: NavigationExample,
         navigationOptions: {
-             title: 'Navigation'
-         }
-     }
+            title: 'Navigation'
+        }
+    },
+    ScrollExample: {
+        screen: ScrollExample
+    }
 })
 
 export default App

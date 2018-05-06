@@ -2,10 +2,13 @@ import { StyleSheet } from 'react-native'
 
 export const textColor = '#333'
 export const primary = '#287EE3'
+export const mutedColor = '#999'
 
 export const view = StyleSheet.create({
     content: {
-        padding: 30
+        paddingLeft: 30,
+        paddingRight: 30,
+        backgroundColor: 'white',
     }
 })
 
@@ -18,7 +21,7 @@ export const text = StyleSheet.create({
         marginBottom: 20,
     },
     title: {
-        marginTop: 10,
+        marginTop: 20,
         marginBottom: 20,
         fontSize: 30,
         fontWeight: '300',
@@ -26,5 +29,8 @@ export const text = StyleSheet.create({
     },
     link: {
         color: primary
-    }
+    },
+    muted: {
+        color: mutedColor
+    },
 })

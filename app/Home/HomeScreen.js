@@ -25,7 +25,7 @@ const contentList = [
         name: 'Safe Area and scroll views',
         subtitle: 'Visible yet not touchable',
         icon: 'list',
-        link: 'nothing'
+        link: 'ScrollExample'
     },
     {
         name: 'Drawing outside the Safe Area',
