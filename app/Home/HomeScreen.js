@@ -19,7 +19,7 @@ const contentList = [
         name: 'Safe Area and nav/tab bars',
         icon: 'navigation',
         subtitle: 'Navigation elements should be touchable',
-        link: 'nothing'
+        link: 'NavigationExample'
     },
     {
         name: 'Safe Area and scroll views',
