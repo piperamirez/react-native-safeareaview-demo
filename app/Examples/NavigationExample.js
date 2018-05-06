@@ -5,30 +5,17 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import * as theme from '../style/theme'
 
-createView = (text) => {
-    return (
-        <View style={styles.view}>
-            <Text style={[ theme.text.title, { textAlign: 'center' } ]}>
-                {text}
-            </Text>
-        </View>
-    )
-}
-
-class HomeTab extends React.Component {
-    render() { return createView('Home 🏠') }
-}
-
-class HeartTab extends React.Component {
-    render() { return createView('Heart ❤️') }
-}
-
-class StarTab extends React.Component {
-    render() { return createView('Star ⭐️') }
-}
-
-class CloudTab extends React.Component {
-    render() { return createView('Cloud ☁️') }
+createScreen = (title, paragraph) => {
+    return class HomeTab extends React.Component {
+        render() {
+            return (
+                <View style={[ theme.view.content, styles.view ]}>
+                    <Text style={theme.text.title}>{title}</Text>
+                    <Text style={theme.text.paragraph}>{paragraph}</Text>
+                </View>
+            )
+        }
+    }
 }
 
 getIcon = (icon, focused, tintColor) => {
@@ -38,18 +25,23 @@ getIcon = (icon, focused, tintColor) => {
 
 export default createBottomTabNavigator(
     {
-        Home: { screen: HomeTab },
-        Heart: { screen: HeartTab },
-        Star: { screen: StarTab },
-        Cloud: { screen: CloudTab }
+        Magic: {
+            screen: createScreen(
+                'Magic 🎩',
+                'Navigation components automagically adjust to Safe Area insets.'
+            )
+        },
+        Heart: { screen: createScreen('Heart ❤️') },
+        Star: { screen: createScreen('Star ⭐️') },
+        Cloud: { screen: createScreen('Cloud ☁️') }
     },
     {
         navigationOptions: ({ navigation }) => ({
             tabBarIcon: ({ focused, tintColor }) => {
                 const { routeName } = navigation.state
                 switch (routeName) {
-                case 'Home':
-                    return getIcon('ios-home', focused, tintColor)
+                case 'Magic':
+                    return getIcon('ios-color-wand', focused, tintColor)
                 case 'Heart':
                     return getIcon('ios-heart', focused, tintColor)
                 case 'Star':
@@ -66,9 +58,5 @@ const styles = StyleSheet.create({
     view: {
         flex: 1,
         justifyContent: 'center',
-    },
-    emoji: {
-        textAlign: 'center',
-        fontSize: 96
     }
 })

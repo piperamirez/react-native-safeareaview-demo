@@ -3,6 +3,12 @@ import { StyleSheet } from 'react-native'
 export const textColor = '#333'
 export const primary = '#287EE3'
 
+export const view = StyleSheet.create({
+    content: {
+        padding: 30
+    }
+})
+
 export const text = StyleSheet.create({
     paragraph: {
         fontSize: 17,

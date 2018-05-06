@@ -11,7 +11,7 @@ export default class SimpleExample extends React.Component {
     render() {
         return (
             <SafeAreaView style={styles.app} forceInset={{ top: 'always', bottom: 'always', right: 'always', left: 'always' }}>
-                <View style={styles.view}>
+                <View style={[ theme.view.content, styles.view ]}>
                     <Text style={theme.text.title}>What is the Safe Area? 🤔</Text>
                     <Text style={theme.text.paragraph}>
                         The Safe Area is a rectangular region defined in UIKit
@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
     view: {
         flex: 1,
         backgroundColor: 'white',
-        justifyContent: 'center',
-        padding: 30
+        justifyContent: 'center'
     }
 })
