@@ -31,13 +31,13 @@ const contentList = [
         name: 'Drawing outside the Safe Area',
         icon: 'crop-free',
         subtitle: 'Sometimes we need to',
-        link: 'nothing'
+        link: 'FullscreenExample'
     },
 ]
 
 const creditsList = [
     {
-        name: 'Credits',
+        name: 'About',
         icon: 'flash-on',
         link: 'nothing'
     }

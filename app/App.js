@@ -7,6 +7,7 @@ import HomeScreen from './Home/HomeScreen'
 import SimpleExample from './Examples/SimpleExample'
 import NavigationExample from './Examples/NavigationExample'
 import ScrollExample from './Examples/ScrollExample'
+import FullscreenExample from './Examples/FullscreenExample'
 
 import { createStackNavigator } from 'react-navigation'
 
@@ -25,6 +26,9 @@ const App = createStackNavigator({
     },
     ScrollExample: {
         screen: ScrollExample
+    },
+    FullscreenExample: {
+        screen: FullscreenExample
     }
 })
 
