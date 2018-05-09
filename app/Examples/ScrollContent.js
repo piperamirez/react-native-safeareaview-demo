@@ -65,7 +65,7 @@ export default class ScrollContent extends React.Component {
                     placerat, quis laoreet est lacinia.
                 </Text>
                 <Text style={[ theme.text.paragraph, {textAlign: 'center'} ]}>
-                    Can we improve this behavior? 🤔
+                    How can we improve this behavior? 🤔
                 </Text>
                 <Text style={{color: theme.textColor, textAlign: 'center'}}>
                     ↓ This is the end of the view ↓
