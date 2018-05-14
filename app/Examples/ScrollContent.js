@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, Image } from 'react-native'
+import { Text, View, Image, Button } from 'react-native'
 
 import * as theme from '../style/theme'
 
@@ -12,7 +12,8 @@ export default class ScrollContent extends React.Component {
                     Scroll down below the Lorem Ipsum text and see how Scrolling
                     behaves with this solution.
                 </Text>
-                <Text style={[ theme.text.paragraph, theme.text.muted ]}>
+                <Button title='Go back' onPress={() => { this.props.navigation.pop() }} />
+                <Text style={[ theme.text.paragraph, theme.text.muted, { marginTop: 20 } ]}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nulla lectus tellus, faucibus sed ex at, placerat vehicula
                     mi. Vivamus ut arcu quam. Vivamus ut eleifend quam.
