@@ -9,9 +9,8 @@ export default class About extends React.Component {
     render() {
         return (
             <View style={[ { flex: 1, justifyContent: 'center' }, theme.view.content ]}>
-                <Text style={{ textAlign: 'center', fontSize: 71 }}>
-                    😊
-                </Text><Text style={[ { textAlign: 'center' }, theme.text.title ]}>
+                <Text style={{ textAlign: 'center', fontSize: 71 }}>😊</Text>
+                <Text style={[ { textAlign: 'center' }, theme.text.title ]}>
                     Thank you!
                 </Text>
                 <Text style={[ { textAlign: 'center' }, theme.text.paragraph ]}>
