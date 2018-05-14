@@ -8,6 +8,7 @@ import SimpleExample from './Examples/SimpleExample'
 import NavigationExample from './Examples/NavigationExample'
 import ScrollExample from './Examples/ScrollExample'
 import FullscreenExample from './Examples/FullscreenExample'
+import About from './Examples/About'
 
 import { createStackNavigator } from 'react-navigation'
 
@@ -29,6 +30,9 @@ const App = createStackNavigator({
     },
     FullscreenExample: {
         screen: FullscreenExample
+    },
+    About: {
+        screen: About
     }
 })
 

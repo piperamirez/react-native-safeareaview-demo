@@ -39,7 +39,7 @@ const creditsList = [
     {
         name: 'About',
         icon: 'flash-on',
-        link: 'nothing'
+        link: 'About'
     }
 ]
 
