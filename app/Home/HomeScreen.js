@@ -8,7 +8,6 @@ import * as theme from '../style/theme'
 const introList = [
     {
         name: 'What is the Safe Area?',
-        subtitle: 'An introduction',
         icon: 'help-outline',
         link: 'SimpleExample'
     }
@@ -16,21 +15,18 @@ const introList = [
 
 const contentList = [
     {
-        name: 'Safe Area and nav/tab bars',
+        name: 'Safe Area and navigation elements',
         icon: 'navigation',
-        subtitle: 'Navigation elements should be touchable',
         link: 'NavigationExample'
     },
     {
-        name: 'Safe Area and scroll views',
-        subtitle: 'Visible yet not touchable',
+        name: 'Safe Area and scrolling',
         icon: 'list',
         link: 'ScrollExample'
     },
     {
         name: 'Drawing outside the Safe Area',
         icon: 'crop-free',
-        subtitle: 'Sometimes we need to',
         link: 'FullscreenExample'
     },
 ]
